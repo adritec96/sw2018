@@ -12,4 +12,4 @@ aqui enlacamos [google](https://google.es)
 
 y por utlimo aqui incluimos nuestra imagen
 
-![imagen](https://github.com/adritec96/sw2018/blob/master/p1/maquinas.png)
+![imagen](https://i.ytimg.com/vi/DR7MLaAKcUk/maxresdefault.jpg)
