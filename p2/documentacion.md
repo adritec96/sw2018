@@ -34,7 +34,8 @@ podemos ver como se ha relizado una copia del archivo hola.html que estaba en la
 Lo primero que tenemos que hacer es crear una clase privada y una clave publica de nuestro servidor que se va a conectar al "maestro" para ello realizamos lo siguiente:
 ![imagen generacion de claves](https://github.com/adritec96/sw2018/blob/master/p2/capturas/generacion_claves.png)
 
-Después tenemos que añadir la clae publica al servidor origen, para ello desde el servidor destino ejecutamos este comando:
+Después tenemos que añadir la clave publica al servidor origen, para ello desde el servidor destino ejecutamos este comando:
+
 ![imagen añadiendo clave publica](https://github.com/adritec96/sw2018/blob/master/p2/capturas/add_clave_publica.png)
 
 Y con esto ya podremos conectarnos sin contraseña!
@@ -42,7 +43,11 @@ Y con esto ya podremos conectarnos sin contraseña!
 ![imagen conexion sin password ](https://github.com/adritec96/sw2018/blob/master/p2/capturas/ssh_sin_pass.png)
 
 Tambien podemos ejecutar un comando remoto de esta manera:
+
 *ssh username@ip_maquina_origen comando -modificadores*
+
 y obtendremos por nuestra salida de pantalla el comando.
+
+
 
 
