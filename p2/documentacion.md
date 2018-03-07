@@ -14,7 +14,7 @@ Para realizar esta tardea en remoto lo utilizaremos de esta manera:
 
 *tar -czv ./carpeta/ | ssh usuario@ip_maquina_destino '  cat > archivo.tgz '*
 
-![imagen tar remoto](www.google.es)
+![imagen tar remoto](https://github.com/adritec96/sw2018/blob/master/p2/tar_remoto.png)
 
 En el comando tar no tenemos que especificar nombre de archivo, ya que la salida la vamos a redirigir con un pipeline hacia un ssh, el cual relizaa un con cat (con el flujo de salida del comando tar) y a su vez este flujo será rediriguido a un archivo.tar
 
@@ -22,7 +22,9 @@ En el comando tar no tenemos que especificar nombre de archivo, ya que la salida
 
 realizamos el comando *rsync -avz -e ssh ip_maquina_origen:/ruta/del/directorio/ /ruta/local/destino/*
 
-![imagen copia rsync](www.google.es)
+![imagen copia rsync](https://github.com/adritec96/sw2018/blob/master/p2/rsync_otro.png)
+
+podemos ver como se ha relizado una copia del archivo hola.html que estaba en la maquina1 (podemos comprobarlo con cat).
 
 [IMFORMACION APLICACION](https://rsync.samba.org)
 
@@ -30,14 +32,14 @@ realizamos el comando *rsync -avz -e ssh ip_maquina_origen:/ruta/del/directorio/
 ##Uso de ssh sin contraseña
 
 Lo primero que tenemos que hacer es crear una clase privada y una clave publica de nuestro servidor que se va a conectar al "maestro" para ello realizamos lo siguiente:
-![imagen generacion de claves] ( gen_claves.png )
+![imagen generacion de claves](https://github.com/adritec96/sw2018/blob/master/p2/generacion_claves.png)
 
 Después tenemos que añadir la clae publica al servidor origen, para ello desde el servidor destino ejecutamos este comando:
-![imagen añadiendo clave publica]( add_clave_publica.png  )
+![imagen añadiendo clave publica](https://github.com/adritec96/sw2018/blob/master/p2/add_clave_publica.png)
 
 Y con esto ya podremos conectarnos sin contraseña!
 
-![imagen conexion sin password ] ( conexion_sin_pass.png )
+![imagen conexion sin password ](https://github.com/adritec96/sw2018/blob/master/p2/ssh_sin_pass.png)
 
 Tambien podemos ejecutar un comando remoto de esta manera:
 *ssh username@ip_maquina_origen comando -modificadores*
