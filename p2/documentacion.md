@@ -56,7 +56,7 @@ y obtendremos por nuestra salida de pantalla el comando.
 
 Para la facil programación de la tarea hemos realizado un ejecutable llamado espejo.sh el cual lo ubicamos en el home de la destino y dentro de este ejcutable ejecutaremos nuestro rsync como puede mostrarse en la imagen:
 
-![imagen rsync en sh]()
+![imagen rsync en sh](https://github.com/adritec96/sw2018/blob/master/p2/capturas/espejo_sh.png)
 
 A cosntinuación de damos permisos de ejecucion con:  *chmod +x espejo.sh*
 Y nos dirguimos a el archivo de crontab y añadimos esta linea al archivo:
@@ -65,11 +65,11 @@ Y nos dirguimos a el archivo de crontab y añadimos esta linea al archivo:
 * *	 * * * adrian2 ~/espejo.sh
 
 
-![imagen de crontab]()
+![imagen de crontab](https://github.com/adritec96/sw2018/blob/master/p2/capturas/crontab.png)
 
 
 con esta linea, se realizará una ejecucion del archivo espejo.sh cada minuto.
 
 Para realizar la prueba, creamos un archivo html nuevo en la maquina principal y vamos actualizando la secundaria y podemos ver como de repente, el archivo "hola2.html" aparece en nuestra maquina esclavo.
 
-![imagen comprobando crontab]()
+![imagen comprobando crontab](https://github.com/adritec96/sw2018/blob/master/p2/capturas/test_clonando.png)
