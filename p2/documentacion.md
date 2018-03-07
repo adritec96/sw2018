@@ -14,7 +14,7 @@ Para realizar esta tardea en remoto lo utilizaremos de esta manera:
 
 *tar -czv ./carpeta/ | ssh usuario@ip_maquina_destino '  cat > archivo.tgz '*
 
-![imagen tar remoto](https://github.com/adritec96/sw2018/blob/master/p2/tar_remoto.png)
+![imagen tar remoto](https://github.com/adritec96/sw2018/blob/master/p2/capturas/tar_remoto.png)
 
 En el comando tar no tenemos que especificar nombre de archivo, ya que la salida la vamos a redirigir con un pipeline hacia un ssh, el cual relizaa un con cat (con el flujo de salida del comando tar) y a su vez este flujo será rediriguido a un archivo.tar
 
@@ -22,7 +22,7 @@ En el comando tar no tenemos que especificar nombre de archivo, ya que la salida
 
 realizamos el comando *rsync -avz -e ssh ip_maquina_origen:/ruta/del/directorio/ /ruta/local/destino/*
 
-![imagen copia rsync](https://github.com/adritec96/sw2018/blob/master/p2/capturas/rsync_otro.png)
+![imagen copia rsync](https://github.com/adritec96/sw2018/blob/master/p2/capturas/rsync.png)
 
 podemos ver como se ha relizado una copia del archivo hola.html que estaba en la maquina1 (podemos comprobarlo con cat).
 
