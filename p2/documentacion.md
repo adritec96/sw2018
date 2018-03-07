@@ -6,8 +6,11 @@ Para ello utilizamos el comando tar de a siguiente manera:
 *tar -czvf archivo.tar ./carpeta/*
 
 -c : indica a tar que cree un archivo.
+
 -z : indica que use el compresor gzip
+
 -f : indica a tar que el siguiente argumento es el nombre del fichero.tar
+
 -v : indica a tar que muestre lo que va empaquetando
 
 Para realizar esta tardea en remoto lo utilizaremos de esta manera:
@@ -49,5 +52,24 @@ Tambien podemos ejecutar un comando remoto de esta manera:
 y obtendremos por nuestra salida de pantalla el comando.
 
 
+## Programacion de tareas con crontab:
+
+Para la facil programación de la tarea hemos realizado un ejecutable llamado espejo.sh el cual lo ubicamos en el home de la destino y dentro de este ejcutable ejecutaremos nuestro rsync como puede mostrarse en la imagen:
+
+![imagen rsync en sh]()
+
+A cosntinuación de damos permisos de ejecucion con:  *chmod +x espejo.sh*
+Y nos dirguimos a el archivo de crontab y añadimos esta linea al archivo:
 
 
+* *	 * * * adrian2 ~/espejo.sh
+
+
+![imagen de crontab]()
+
+
+con esta linea, se realizará una ejecucion del archivo espejo.sh cada minuto.
+
+Para realizar la prueba, creamos un archivo html nuevo en la maquina principal y vamos actualizando la secundaria y podemos ver como de repente, el archivo "hola2.html" aparece en nuestra maquina esclavo.
+
+![imagen comprobando crontab]()
