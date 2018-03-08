@@ -59,10 +59,7 @@ Para la facil programación de la tarea hemos realizado un ejecutable llamado es
 ![imagen rsync en sh](https://github.com/adritec96/sw2018/blob/master/p2/capturas/espejo_sh.png)
 
 A cosntinuación de damos permisos de ejecucion con:  *chmod +x espejo.sh*
-Y nos dirguimos a el archivo de crontab y añadimos esta linea al archivo:
-
-
-* *	 * * * adrian2 ~/espejo.sh
+Y nos dirguimos a el archivo de crontab y añadimos esta utlima linea al archivo:
 
 
 ![imagen de crontab](https://github.com/adritec96/sw2018/blob/master/p2/capturas/crontab.png)
