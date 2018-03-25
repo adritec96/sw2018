@@ -35,7 +35,7 @@ Podemos añadir
 
 	keepalive 3;
 
-	\}
+	}
 
 	**weight:** Modificamos la prioridad de reparto de peticiones ( cuando mas grande mas peticiones).
 	**max_fails:** Especifica un número de intentos de comunicación erróneos en "fail_timeout" segundos para considerar al servidor no operativo (por defecto es 1, un valor de 0 lo desactivaría)
