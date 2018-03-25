@@ -4,6 +4,7 @@
 
 
 Para ello utilizamos el comando apt-get install para instalarlo:
+
 *apt-get install nginx*
 
 **IMPORTANTE** Tener el SO totalmente actualizado  y la configuración de red correcta, con conexion entre las maqinas ( 192.168.56.103 será mi balanceador.)
@@ -19,7 +20,7 @@ dentro de este archivo realizaremos la siguiente configuracion:
 ![imagen conf1](https://github.com/adritec96/sw2018/blob/master/p3/capturas/conf1.png)
 
 Podemos añadir
-	upstream apaches {
+	upstream apaches { 
 	ip_hash;
 	server 172.168.56.130 weight=1 max_fails=3  fails_timeout = 30s;
 	server 172.168.56.131 weight=2 max_fails=3 fails_timeout = 30s;
