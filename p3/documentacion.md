@@ -10,9 +10,11 @@ Para ello utilizamos el comando apt-get install para instalarlo:
 **IMPORTANTE** Tener el SO totalmente actualizado  y la configuración de red correcta, con conexion entre las maqinas ( 192.168.56.103 será mi balanceador.)
 
 Una vez lo tenemos instalado, tenemos que arracncarlo utilizando el comando:
+
 *sudo systemctl strat nginx*
 
 Una vez tenemos el servicio corriendo tenemos que configurarlo, para ello crearemos un archivo en:
+
 *sudo nano /etc/nginx/conf.d/default.conf*
 
 dentro de este archivo realizaremos la siguiente configuracion:
@@ -21,12 +23,18 @@ dentro de este archivo realizaremos la siguiente configuracion:
 
 Podemos añadir
 	upstream apaches { 
+
 	ip_hash;
+
 	server 172.168.56.130 weight=1 max_fails=3  fails_timeout = 30s;
+
 	server 172.168.56.131 weight=2 max_fails=3 fails_timeout = 30s;
+
 	server 172.168.56.132 .............  down;
-	keepalive 3;						
-	} 
+
+	keepalive 3;
+
+	}
 
 	**weight:** Modificamos la prioridad de reparto de peticiones ( cuando mas grande mas peticiones).
 	**max_fails:** Especifica un número de intentos de comunicación erróneos en "fail_timeout" segundos para considerar al servidor no operativo (por defecto es 1, un valor de 0 lo desactivaría)
