@@ -9,7 +9,7 @@ Para ello utilizamos el comando apt-get install para instalarlo:
 **IMPORTANTE** Tener el SO totalmente actualizado  y la configuración de red correcta, con conexion entre las maqinas ( 192.168.56.103 será mi balanceador.)
 
 Una vez lo tenemos instalado, tenemos que arracncarlo utilizando el comando:
-* sudo systemctl strat nginx*
+*sudo systemctl strat nginx*
 
 Una vez tenemos el servicio corriendo tenemos que configurarlo, para ello crearemos un archivo en:
 *sudo nano /etc/nginx/conf.d/default.conf*
@@ -19,13 +19,13 @@ dentro de este archivo realizaremos la siguiente configuracion:
 ![imagen conf1](https://github.com/adritec96/sw2018/blob/master/p3/capturas/conf1.png)
 
 Podemos añadir
-	*upstream apaches {
-	ip_hash; 							
-	server 172.168.56.130 weight=1 max_fails=3  fails_timeout = 30s; 
+	upstream apaches {
+	ip_hash;
+	server 172.168.56.130 weight=1 max_fails=3  fails_timeout = 30s;
 	server 172.168.56.131 weight=2 max_fails=3 fails_timeout = 30s;
 	server 172.168.56.132 .............  down;
 	keepalive 3;						
-	}*
+	} 
 
 	**weight:** Modificamos la prioridad de reparto de peticiones ( cuando mas grande mas peticiones).
 	**max_fails:** Especifica un número de intentos de comunicación erróneos en "fail_timeout" segundos para considerar al servidor no operativo (por defecto es 1, un valor de 0 lo desactivaría)
@@ -61,7 +61,7 @@ Una vez esto, volvemos a realizar el reinicio del servicio nginx y ya tendremos 
 
 Lo primero que tenemos que hacer es instalar y configurar una maquina limpia (yo he creado un clon de la maquina que usé para nginx y lo he desistalado ), una vez tengamos la maquina limpia, podemos proceder a instalar haproxy con el siguiente comando:
 *sudo apt-get install haproxy*
-La configuración por defecto no nos sirve, tenemos que modificar el archivo de configuracion */etc/haproxy/haproxy.cfg*
+La configuración por defecto no nos sirve, tenemos que modificar el archivo de configuracion    */etc/haproxy/haproxy.cfg*
 
 ![imagen conf2](https://github.com/adritec96/sw2018/blob/master/p3/capturas/conf3.png)
 
@@ -70,8 +70,8 @@ De esta manera, hemos configurado nuestro haproxy para que escuche cualquier ip 
 Para lanzar el servicio solo tenemos que ejecutar *sudo /usr/sbin/haproxy -f /etc/haproxy/haproxy.cfg* Ahora realizaremos las mismas pruebas, utilizando el navegador y usando solo la ip de nuestra maquina haproxy:
 
 
-![test1](https://github.com/adritec96/sw2018/blob/master/p3/capturas/test1.png)
+![test1](https://github.com/adritec96/sw2018/blob/master/p3/capturas/test2.png)
 
 
 
-![test2](https://github.com/adritec96/sw2018/blob/master/p3/capturas/test2.png)
+![test2](https://github.com/adritec96/sw2018/blob/master/p3/capturas/test1.png)
