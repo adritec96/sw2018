@@ -20,9 +20,9 @@ Una vez tenemos el servicio corriendo tenemos que configurarlo, para ello creare
 dentro de este archivo realizaremos la siguiente configuracion:
 
 ![imagen conf1](https://github.com/adritec96/sw2018/blob/master/p3/capturas/conf1.png)
-`
+
 Podemos añadir
-	upstream apaches { 
+	upstream apaches \{ 
 
 	ip_hash;
 
@@ -35,7 +35,7 @@ Podemos añadir
 	keepalive 3;
 
 	}
-`
+
 	**weight:** Modificamos la prioridad de reparto de peticiones ( cuando mas grande mas peticiones).
 	**max_fails:** Especifica un número de intentos de comunicación erróneos en "fail_timeout" segundos para considerar al servidor no operativo (por defecto es 1, un valor de 0 lo desactivaría)
 	**fails_timeout:** indica el tiempo en el que deben ocurrir "max_fails" intentos fallidos de conexión para considerar al servidor no operativo. Por defecto es 10 segundos
