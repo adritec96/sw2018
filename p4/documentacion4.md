@@ -69,3 +69,7 @@ y hemos realizado un scrip para realizar la configuracion del iptables.
 despues solamente tenemos que ejecutar el scrip y podemos ver gracias al comando *iptables -L -n -v* que se ha realizado correctamente la configuración.
 
 ![imagen iptables3](https://github.com/adritec96/sw2018/blob/master/p4/capturas/iptables3.png)
+
+y ya tendremos acceso desde el cortafuegos tanto a peticiones http y https las cuales serán redirigidas a la maquina servidora 1.
+
+![imagen iptablesTest](https://github.com/adritec96/sw2018/blob/master/p4/capturas/iptables_test.png)
