@@ -37,15 +37,16 @@ Podemos añadir
 
 	}
 
-	**weight:** Modificamos la prioridad de reparto de peticiones ( cuando mas grande mas peticiones).
-	**max_fails:** Especifica un número de intentos de comunicación erróneos en "fail_timeout" segundos para considerar al servidor no operativo (por defecto es 1, un valor de 0 lo desactivaría)
-	**fails_timeout:** indica el tiempo en el que deben ocurrir "max_fails" intentos fallidos de conexión para considerar al servidor no operativo. Por defecto es 10 segundos
-	**ip_hash:** Configuramos que cada ip se redirige a un backend. (Persistencia de Sesiones )
-	**keepalive:** Configuramos que se realizen conexiones con cookies para mantener la identificacion.
-	**down:** Configura como servidor caido y no manda peticiones hacia el.
+**weight:** Modificamos la prioridad de reparto de peticiones ( cuando mas grande mas peticiones).
+**max_fails:** Especifica un número de intentos de comunicación erróneos en "fail_timeout" segundos para considerar al servidor no operativo (por defecto es 1, un valor de 0 lo desactivaría)
+**fails_timeout:** indica el tiempo en el que deben ocurrir "max_fails" intentos fallidos de conexión para considerar al servidor no operativo. Por defecto es 10 segundos
+**ip_hash:** Configuramos que cada ip se redirige a un backend. (Persistencia de Sesiones )
+**keepalive:** Configuramos que se realizen conexiones con cookies para mantener la identificacion.
+**down:** Configura como servidor caido y no manda peticiones hacia el.
 
 
 Después tenemos que hacer una segunda configuración si tenemos una de las nuevas versiones de nginx, para ello accedemos a: 
+
 *sudo nano /etc/nginx/nginx.conf*
 
 Dentro de este archivo lo que tenemso que hacer es comentar una linea para que el servidor nginx no actue como un servidor web. (ultima linea de la imagen)
@@ -70,8 +71,12 @@ Una vez esto, volvemos a realizar el reinicio del servicio nginx y ya tendremos 
 ## Instalar y Configurar el balanceador de carga Haproxy:
 
 Lo primero que tenemos que hacer es instalar y configurar una maquina limpia (yo he creado un clon de la maquina que usé para nginx y lo he desistalado ), una vez tengamos la maquina limpia, podemos proceder a instalar haproxy con el siguiente comando:
+
 *sudo apt-get install haproxy*
-La configuración por defecto no nos sirve, tenemos que modificar el archivo de configuracion    */etc/haproxy/haproxy.cfg*
+
+La configuración por defecto no nos sirve, tenemos que modificar el archivo de configuracion   
+
+*/etc/haproxy/haproxy.cfg*
 
 ![imagen conf2](https://github.com/adritec96/sw2018/blob/master/p3/capturas/conf3.png)
 
