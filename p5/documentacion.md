@@ -1,7 +1,7 @@
-##Practica5: Replicación de bases de datos MySQL
+## Practica5: Replicación de bases de datos MySQL
 
 
-#Primer paso: Instalar mysql, crear las tablas de ejemplo y añadirle algunos datos.
+# Primer paso: Instalar mysql, crear las tablas de ejemplo y añadirle algunos datos.
 
 
 Lo primero que tenemos que hacer es instalar mysql-server para ello, usaremos:
@@ -49,7 +49,7 @@ para comprobar que todo se ha echo correctamente podemos hacer estas consultas:
 *describe datos;*				**Realizar consulta de los atributos de una tabla** 
 
 
-#Segundo Paso: Realizar backup local, transferir copia y restaurar en 2 maquina:
+# Segundo Paso: Realizar backup local, transferir copia y restaurar en 2 maquina:
 
 Para realizar el backup local vamos a utilizar mysqldump pero antes de nada, tenemos que bloquear las tablas para que durante el backup no se esté escirbiendo en las mismas tablas, para ello utilizamos *FLUSH TABLES WITH READ LOCK;* desde la consola de mysql:
 
@@ -78,7 +78,7 @@ para comprobar que todo se ha importado correctamente podemos acceder a la conso
 ![imagen ya_copiados](https://github.com/adritec96/sw2018/blob/master/p5/capturas/ya_copiados.png)
 
 
-#Tercer Paso: Realizar la Replicacion automaticamente usando maestro-esclavo
+# Tercer Paso: Realizar la Replicacion automaticamente usando maestro-esclavo
 
 Lo primero que tenemos que hacer es modificar las configuraciones de las dos maquinas. Comenzaremos por la MAESTRO(maquina1):
 
